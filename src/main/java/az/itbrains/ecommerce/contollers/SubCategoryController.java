@@ -33,7 +33,8 @@ public class SubCategoryController {
 //    private final SubCategoryService subCategoryService;
 //
 //    public SubCategoryController(SubCategoryService subCategoryService) {
-//SpringBoot ise due
+//SpringBoot ise dusen kimi SubCategoryService interfeysini heyata keciren obyektin suretini cixarir
+//ve konstruktor ile avtamaik olaraq kontrollerin icine oturur
 //        this.subCategoryService = subCategoryService;
 //    }
 //}
