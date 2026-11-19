@@ -1,17 +1,46 @@
 package az.itbrains.ecommerce.services.impls;
 
+import az.itbrains.ecommerce.dto.category.CategoryCreateDTO;
+import az.itbrains.ecommerce.dto.category.CategoryFeaturedDTO;
+import az.itbrains.ecommerce.dto.category.CategoryHomeDTO;
+import az.itbrains.ecommerce.models.Category;
 import az.itbrains.ecommerce.repositories.CategoryRepository;
 import az.itbrains.ecommerce.services.CategoryService;
 import org.springframework.stereotype.Service;
 
-@Service
-//interface implement olunmus class.in obyektini goturur
+import java.util.List;
 
-public class CategoryServiceImpl implements CategoryService{
+
+@Service
+public class CategoryServiceImpl implements CategoryService {
     private final CategoryRepository categoryRepository;
-    //final olduguna gore deyeri deyismek ucun, konetruktor daxilinde
-    //teyin edilmelidir
+
     public CategoryServiceImpl(CategoryRepository categoryRepository){
         this.categoryRepository=categoryRepository;
     }
+
+    @Override
+    public List<CategoryHomeDTO> getAllCategories() {
+        return List.of();
+    }
+
+    @Override
+    public List<CategoryFeaturedDTO> getAllFeaturedCategories() {
+        return List.of();
+    }
+
+    @Override
+    public CategoryCreateDTO createCategory(CategoryCreateDTO createDTO) {
+
+        Category category= new Category();
+        category.setName(createDTO.getName());
+        category.setFeatured(false);
+
+        return null;
+    }
 }
+
+//impl qovlugu-> Service interfeyslerinin icraci siniflerini saxlayir
+//CategoryServiceImpl->CategoryServicenin isini heyata kecirir
+//ProductServiceImpl
+//SubCategoryServiceImpl

@@ -18,3 +18,10 @@ public class CategoryHomeDTO {
     Long id;
     String name;
 }
+
+//DTO -> melumatlarin hamisini yox, lazimi ve tehlukesiz hissesini
+//frontend-e oturur ve ya c=xaricden gelen info.larin qebul edilmesi ucun
+// sinifleri saxlayir ozunde
+//category qovlugu->
+//product
+//CategoryHomeDTO-> ana sehifede kat.lari gostermek ucun lazim olan min info.lar
